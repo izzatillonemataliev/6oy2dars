@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import React, { useState } from 'react';
 
 function TodoApp() {
-  const [todos, setTodos] = useState([]); // todo lar ro'yxati
-  const [inputValue, setInputValue] = useState(''); // input qiymati
+  const [todos, setTodos] = useState([]); 
+  const [inputValue, setInputValue] = useState(''); 
 
-  // Input o'zgaruvchisini yangilash funksiyasi
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  // Todo qo'shish funksiyasi
   const handleAddTodo = () => {
-    if (inputValue.trim() !== '') { // Bo'sh qatorni qabul qilmaslik
+    if (inputValue.trim() !== '') {
       setTodos([...todos, inputValue]);
-      setInputValue(''); // Inputni tozalash
+      setInputValue('');
     }
   };
 
